@@ -1,0 +1,7 @@
+2025-02-09 16:10:58.922 QQRobot.py[6] __init__ -> Find Control Timeout(10s): {Name: '尖塔引擎学习与游戏制作交流群千年学院分群', ControlType: WindowControl}
+2025-02-09 16:11:11.738 QQRobot.py[6] __init__ -> Find Control Timeout(10s): {Name: '尖塔引擎学习与游戏制作交流群千年学院分群', ControlType: WindowControl}
+2025-02-09 16:11:41.021 QQRobot.py[6] __init__ -> Find Control Timeout(10s): {Name: '尖塔引擎学习与游戏制作交流群千年学院分群', ControlType: WindowControl}
+2025-02-09 16:11:51.873 QQRobot.py[6] __init__ -> Find Control Timeout(10s): {Name: '尖塔引擎学习与游戏制作交流群千年学院分群', ControlType: WindowControl}
+2025-02-09 16:12:23.060 QQRobot.py[6] __init__ -> Find Control Timeout(10s): {Name: '尖塔引擎学习与游戏制作交流群千年学院分群', ControlType: WindowControl}
+2025-02-09 16:13:05.189 QQRobot.py[6] __init__ -> Find Control Timeout(10s): {Name: 'QQ', ControlType: WindowControl}
+2025-02-09 18:54:36.225 QQRobot.py[69] find_child -> Find Control Timeout(10s): {Name: '尖塔引擎学习与游戏制作交流群千年学院分群', ControlType: WindowControl}
