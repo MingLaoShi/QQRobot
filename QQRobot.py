@@ -5,6 +5,7 @@ from dataclasses import dataclass
 import re
 import time
 import threading
+# import pyautogui
 
 DEBGU=False
 
@@ -38,14 +39,17 @@ class QQRobot:
     user_route_with_time='010'
     msg_route_with_time='00100'
 
-    def __init__(self,name):
-        self.window = WindowControl(searchDepth=1, Name=name)
+    send_panel_route='00122130100'
+    send_btn_route='001221410'
 
-        if self.window.Exists(0):
-            print('找到窗口')
-            self.window.SetActive()
-        else:
-            print('未找到窗口')
+    def __init__(self,name):
+        # self.window = WindowControl(searchDepth=1, Name=name)
+
+        # if self.window.Exists(0):
+        #     print('找到窗口')
+        #     self.window.SetActive()
+        # else:
+        #     print('未找到窗口')
 
         for win in auto.GetRootControl().GetChildren():
             print(f"窗口: {win.Name}, Class: {win.ClassName}")
@@ -56,6 +60,9 @@ class QQRobot:
 
         self.last_msg=None
         self.name=name
+        self.send_panel=None
+        self.send_btn=None
+        self.send_list=[]
 
     def inited(self):
         return self.window!=None
@@ -97,6 +104,13 @@ class QQRobot:
 
     def find_msg_panel(self):
         self.msg_panel=self.find_child_by_route(self.window,self.meg_list_route)
+
+    def find_send_panel(self):
+        self.send_panel=self.find_child_by_route(self.window,self.send_panel_route)
+        # self.send_panel=send_panel.EditControl()
+    
+    def find_send_btn(self):
+        self.send_btn=self.find_child_by_route(self.window,self.send_btn_route)
     
     def msg_list(self):
         msgs=self.find_child(self.msg_panel)
@@ -135,9 +149,10 @@ class QQRobot:
 
     def start(self,stopEvent):
         self.find_msg_panel()
+        self.find_send_panel()
+        self.find_send_btn()
         print('开始循环监听')
         while True:
-            time.sleep(0.5)
             if stopEvent.is_set():
                 print(f'robot {self.name}:退出')
                 break
@@ -146,6 +161,24 @@ class QQRobot:
                 print(f'{self.name}[{last_msg.formattedMsg()}]')
                 # last_msg.display()
                 self.last_msg=last_msg
+
+            if len(self.send_list)>0:
+                # self.send_panel.SetFocus()
+                self.send_panel.SendKey(self.send_list.pop())
+                self.send_panel.SendKey("{Enter}")
+
+            time.sleep(0.5)
+        # self.send_panel.SetFocus()
+        # time.sleep(0.5)
+        # pyautogui.typewrite('对的')
+        # pyautogui.press('enter')
+    
+
+    def send_msg(self,msg):
+        self.send_list.append(msg)
+        if DEBGU:
+            print('msg----------------')
+            print(msg)
 
 def test():
     robots=[]
@@ -159,7 +192,7 @@ def test():
 def main():
     robots=[]
     robots.append(QQRobot('尖塔引擎学习与游戏制作交流群千年学院分群'))
-    robots.append(QQRobot('杀戮尖塔Mod交流群'))
+    # robots.append(QQRobot('杀戮尖塔Mod交流群'))
 
     threads=[]
     stop_Event=threading.Event()
@@ -171,13 +204,20 @@ def main():
     
     try:
         while True:
+            text=input()
+            if text.lower()=="exit":
+                break
+            robots[0].send_msg(text)
             time.sleep(1)
     except KeyboardInterrupt:
-        print('终止所有进程')
-        stop_Event.set()
-        for thread in threads:
-            thread.join()
-        print('进程已终止')
+        pass
+
+    print('终止所有进程')
+    stop_Event.set()
+    for thread in threads:
+        thread.join()
+    print('进程已终止')
+
 
 if __name__=='__main__':
     main()

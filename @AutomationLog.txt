@@ -5,3 +5,22 @@
 2025-02-09 16:12:23.060 QQRobot.py[6] __init__ -> Find Control Timeout(10s): {Name: '尖塔引擎学习与游戏制作交流群千年学院分群', ControlType: WindowControl}
 2025-02-09 16:13:05.189 QQRobot.py[6] __init__ -> Find Control Timeout(10s): {Name: 'QQ', ControlType: WindowControl}
 2025-02-09 18:54:36.225 QQRobot.py[69] find_child -> Find Control Timeout(10s): {Name: '尖塔引擎学习与游戏制作交流群千年学院分群', ControlType: WindowControl}
+2025-02-11 23:05:20.845 QQRobot.py[165] start -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-11 23:08:07.964 QQRobot.py[166] start -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:14:37.212 QQRobot.py[170] start -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:18:35.632 pydevd_resolver.py[193] _get_py_dictionary -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:18:45.640 pydevd_resolver.py[193] _get_py_dictionary -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:18:55.642 pydevd_resolver.py[193] _get_py_dictionary -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:19:05.643 pydevd_resolver.py[193] _get_py_dictionary -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:19:15.644 pydevd_resolver.py[193] _get_py_dictionary -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:19:25.646 pydevd_resolver.py[193] _get_py_dictionary -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:19:35.647 pydevd_resolver.py[193] _get_py_dictionary -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:19:45.649 pydevd_resolver.py[193] _get_py_dictionary -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:19:55.650 pydevd_resolver.py[193] _get_py_dictionary -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:20:05.652 pydevd_resolver.py[193] _get_py_dictionary -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:20:15.654 pydevd_resolver.py[193] _get_py_dictionary -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:20:25.655 pydevd_resolver.py[193] _get_py_dictionary -> 2025-02-12 21:23:02.338 QQRobot.py[172] start -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:23:23.614 QQRobot.py[172] start -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:23:43.224 pydevd_resolver.py[193] _get_py_dictionary -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:23:53.227 pydevd_resolver.py[193] _get_py_dictionary -> Find Control Timeout(10s): {ControlType: EditControl}
+2025-02-12 21:24:03.229 pydevd_resolver.py[193] _get_py_dictionary -> 2025-02-12 21:30:03.159 QQRobot.py[171] start -> 
